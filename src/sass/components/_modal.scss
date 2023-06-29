@@ -1,0 +1,186 @@
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    text-align: left;
+    background: rgba(0, 0, 0, .6);
+    transition: visibility 0s, opacity 0.3s linear;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0, opacity 0.3s linear;
+    }
+
+    .modal-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .modal-content {
+        display: grid;
+        grid-template-columns: 500px 0.95fr;
+        min-width: 900px;
+        min-height: 500px;
+        transition: top .25s ease;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        margin: auto;
+        overflow: visible;
+        background: $color-light-s;
+        border-radius: 9px;
+        height: 50%;
+        grid-template-areas: "image content";
+
+        @media screen and (max-width: 1050px) {
+            grid-template-columns: 350px 0.98fr;
+            max-width: 700px;
+            //max-height: 350px;
+            min-width: 630px;
+            min-height: 350px;
+        }
+
+        @media screen and (max-width: 730px) {
+            grid-template-areas: "content";
+            grid-template-columns: 1fr;
+            margin: auto;
+            max-width: 240px;
+            //max-height: 341px;
+            min-width: 240px;
+            min-height: 341px;
+        }
+
+        @media screen and (max-width: 400px) {
+            grid-template-columns: 0.97fr;
+        }
+    }
+
+    .pet-image {
+        grid-area: image;
+        object-fit: cover;
+        width: 100%;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius: 9px;
+
+        @media screen and (max-width: 730px) {
+            display: none;
+        }
+    }
+
+    .pet-content {
+        grid-area: content;
+        padding-top: 3.3em;
+        padding-left: 1.9em;
+
+        @media screen and (max-width: 1050px) {
+            padding-top: 0.8em;
+            padding-left: 0.8em;
+            padding-right: 0.8em;
+        }
+
+        @media screen and (max-width: 730px) {
+            padding-top: 0em;
+        }
+
+        .pet-name {
+            @media screen and (max-width: 730px) {
+                padding-top: 0.3em;
+                margin: auto;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        .pet-breed {
+            margin-top: 0.5em;
+            text-align: left;
+
+            @media screen and (max-width: 1050px) {
+                margin-bottom: 0.8em;
+            }
+
+            @media screen and (max-width: 730px) {
+                margin-top: 0.5em;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        .pet-description {
+            margin-top: 2.5em;
+            text-align: start;
+
+            @media screen and (max-width: 1050px) {
+                margin-top: 1em;
+
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 110%;
+                letter-spacing: 0.06em;
+            }
+
+            @media screen and (max-width: 400px) {
+                margin-top: 1.5em;
+                text-align: justify;
+            }
+        }
+
+        li::marker {
+            color: $color-primary;
+        }
+
+        ul {
+            padding-left: 1em;
+            margin-top: 2.6em;
+
+            @media screen and (max-width: 1050px) {
+                margin-top: 0.7em;
+            }
+        }
+
+        li {
+            padding-left: 0;
+            margin-top: 0.8em;
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+
+            @media screen and (max-width: 1050px) {
+                margin-top: 0.4em;
+            }
+        }
+
+
+    }
+
+    .modal-close {
+        position: absolute;
+        right: -42px;
+        top: -52px;
+        cursor: pointer;
+        transition: 0s;
+
+        @media screen and (max-width: 400px) {
+            right: -32px;
+            top: -52px;
+        }
+    }
+
+}

@@ -1,0 +1,121 @@
+@mixin button-base {
+    height: 52px;
+    border-radius: 100px;
+    transition: 0.3s;
+    @include button-text;
+    border: none;
+}
+
+@mixin button-image-base {
+    height: 52px;
+    border-radius: 100px;
+    transition: 0.3s;
+    @include button-image;
+    border: none;
+}
+
+@mixin button-hover($background-color) {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: $background-color;
+}
+
+.button-big-fill {
+    @include button-base();
+    width: 207px;
+    background-color: $color-primary;
+
+    &:hover {
+        @include button-hover($color-primary-light);
+    }
+}
+
+.button-big-fill-pets {
+    @include button-base();
+    width: 261px;
+    background-color: $color-primary;
+
+    &:hover {
+        @include button-hover($color-primary-light);
+    }
+}
+
+.button-big-empty {
+    @include button-base();
+    width: 207px;
+    border: 2px solid $color-primary;
+
+    &:hover {
+        @include button-hover($color-primary);
+    }
+}
+
+.card-button-big-empty {
+    @include button-base();
+    width: 187px;
+    border: 2px solid $color-primary;
+    background-color: transparent;
+
+    &:hover {
+        @include button-hover($color-primary);
+    }
+}
+
+.button-round-empty {
+    @include button-image-base();
+    width: 52px;
+    border: 2px solid $color-primary;
+    padding: 0;
+    color: $color-dark-3xl;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        stroke: $color-dark-l;
+        stroke-width: 0.5px;
+        //fill: $color-black;
+    }
+
+    &:hover {
+        @include button-hover($color-primary-light);
+        border: 2px solid $color-primary-light;
+    }
+}
+
+.button-round-disabled {
+    @include button-image-base();
+    width: 52px;
+    border: 2px solid $color-dark-s;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        stroke: $color-dark-s;
+    }
+}
+
+.button-round-fill {
+    @include button-image-base();
+    width: 52px;
+    border: 2px solid $color-primary-light;
+    padding: 0;
+    color: $color-dark-3xl;
+    background-color: $color-primary-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+        border: 2px solid $color-primary;
+        background-color: $color-primary;
+    }
+
+    &:not(.active):hover {
+        @include button-hover($color-primary-light);
+    }
+}

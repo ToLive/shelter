@@ -1,0 +1,38 @@
+.nav-link {
+    list-style: none;
+
+    a {
+        @include link;
+
+        display: block;
+        height: 24px;
+        color: $color-light-l;
+        transition: 0.3s;
+
+        &.active {
+            color: $color-light-s;
+            border-bottom: solid 3px $color-primary;
+            cursor: default;
+        }
+
+        &:not(.active):hover {
+            cursor: pointer;
+            color: $color-light-s;
+        }
+    }
+
+    &.dark {
+        a {
+            color: $color-dark-l;
+
+            &.active {
+                border-bottom: solid 3px $color-primary;
+            }
+
+            &:not(.active):hover {
+                cursor: pointer;
+                color: $color-dark-3xl;
+            }
+        }
+    }
+}

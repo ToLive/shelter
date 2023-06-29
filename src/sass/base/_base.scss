@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+
+    &.is-fixed {
+        position: fixed;
+    }
+
+    .menu_overlay {
+        background-color: rgba(34, 34, 34, 0.699);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0s, opacity 0.3s linear;
+
+        &.is-active {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s, opacity 0.3s linear;
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@mixin desktop {
+    display: flex;
+    justify-content: center;
+}
+
+.flip-image {
+    transform: rotate(180deg);
+}

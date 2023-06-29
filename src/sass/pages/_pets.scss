@@ -1,0 +1,245 @@
+.pets-main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1230px) {
+        margin: 0 2em;
+    }
+
+    @media screen and (max-width: 500px) {
+        margin: 0 0.4em;
+    }
+
+    .pets-start-screen {
+        max-width: 1200px;
+        width: 100%;
+    }
+}
+
+
+.friends-section {
+    background-color: $background-light-l;
+
+
+    .friends-content {
+        max-width: 1200px;
+        min-height: 1342px;
+        display: grid;
+        margin: 0 auto;
+
+
+        align-items: center;
+        align-self: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: 0.8fr 1fr 1fr 0.8fr;
+        grid-template-rows: 19% 29% 30% 25%;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". title title ."
+            "card-slider card-slider card-slider card-slider"
+            "card-slider card-slider card-slider card-slider"
+            ". controls controls .";
+
+        @media screen and (max-width: 980px) {
+            min-height: 1733px;
+            align-content: center;
+            grid-template-columns: 45% 45%;
+            grid-template-rows: 6% 35% 46% 0% 4%;
+            grid-template-areas:
+                "title title"
+                "card-slider card-slider"
+                "card-slider card-slider"
+                "card-slider card-slider"
+                "controls controls";
+
+        }
+
+        @media screen and (max-width: 680px) {
+            min-height: 1649px;
+            align-content: center;
+            grid-template-columns: 90%;
+            grid-template-rows: 6% 35% 46% 0% 6%;
+            grid-template-areas:
+                "title"
+                "card-slider"
+                "card-slider"
+                "card-slider"
+                "controls";
+
+        }
+
+        @media screen and (max-width: 500px) {
+            align-content: center;
+            grid-template-columns: 90%;
+            grid-template-rows: 5% 41% 46% 0% 4%;
+            grid-template-areas:
+                "title"
+                "card-slider"
+                "card-slider"
+                "card-slider"
+                "controls";
+
+        }
+
+        .title {
+            grid-area: title;
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 130%;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.06em;
+
+            @media screen and (max-width: 900px) {
+                margin: 0;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 130%;
+                text-align: center;
+                letter-spacing: 0.06em;
+            }
+        }
+
+        .card-slider {
+            grid-area: card-slider;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 45px;
+            padding-top: 0;
+            gap: 15px 40px;
+
+            @media screen and (max-width: 900px) {
+                gap: 30px 40px;
+                align-items: flex-start;
+                align-content: flex-start;
+                margin-top: 0;
+            }
+
+            .pet-card {
+                flex-basis: 10%;
+                margin: 15px 0 0 0;
+
+                @media screen and (max-width: 1216px) {
+                    flex-basis: 20%;
+
+                    &:nth-child(7) {
+                        display: none;
+                    }
+
+                    &:nth-child(8) {
+                        display: none;
+                    }
+                }
+
+                @media screen and (max-width: 800px) {
+                    margin: 0;
+
+                    &:nth-child(7) {
+                        display: none;
+                    }
+
+                    &:nth-child(8) {
+                        display: none;
+                    }
+                }
+
+                @media screen and (max-width: 680px) {
+                    margin: 0;
+
+                    &:nth-child(4) {
+                        display: none;
+                    }
+
+                    &:nth-child(5) {
+                        display: none;
+                    }
+
+                    &:nth-child(6) {
+                        display: none;
+                    }
+
+                    &:nth-child(7) {
+                        display: none;
+                    }
+
+                    &:nth-child(8) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .controls {
+            grid-area: controls;
+            display: flex;
+            flex-direction: row;
+            gap: 0 20px;
+
+            @media screen and (max-width: 980px) {
+                align-content: flex-end;
+                align-self: flex-end;
+            }
+
+            @media screen and (max-width: 650px) {
+                align-self: center;
+            }
+
+            @media screen and (max-width: 400px) {
+                gap: 0 10px;
+                align-self: center;
+            }
+        }
+    }
+}
+
+
+
+
+/*@include desktop;
+    height: 1342px;
+    background-color: $background-light-l;
+
+    .friends-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 40px 0 40px;
+        width: 1200px;
+        margin-top: 80px;
+
+        .slider {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 45px;
+            padding-top: 0;
+            gap: 15px 40px;
+
+            .pet-card {
+                flex-basis: 10%;
+                margin: 15px 0 0 0;
+            }
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: row;
+            margin-top: 60px;
+            gap: 20px;
+        }
+    }
+}*/

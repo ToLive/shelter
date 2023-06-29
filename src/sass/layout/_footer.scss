@@ -1,0 +1,253 @@
+footer {
+    background: url(/assets/images/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+
+    .footer-content {
+        display: grid;
+        max-width: 1200px;
+        min-height: 350px;
+        margin: 0 auto;
+        align-items: center;
+        align-content: flex-end;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 26% 26% 17%;
+        grid-template-rows: 90px 32px 32px 16px;
+        gap: 40px 125px;
+        grid-template-areas: "col1-header col2-header contacts-img"
+            "email location1 contacts-img"
+            "phone location2 contacts-img"
+            ". . contacts-img";
+
+        @media screen and (max-width: 1230px) {
+            justify-content: center;
+            align-items: flex-end;
+            min-height: 639px;
+            grid-template-columns: 45% 45%;
+            grid-template-rows: 90px 32px 32px 0.8fr;
+            grid-template-areas: "col1-header col2-header"
+                "email location1"
+                "phone location2"
+                "contacts-img contacts-img";
+        }
+
+        @media screen and (max-width: 1230px) {
+            //align-content: center;
+            grid-template-columns: 279px 302px;
+            grid-template-rows: 90px 32px 32px 0.915fr;
+            gap: 40px 60px;
+        }
+
+        @media screen and (max-width: 700px) {
+            justify-content: center;
+            justify-items: center;
+            align-content: flex-end;
+            text-align: center;
+            min-height: 809px;
+            grid-template-columns: 91%;
+            grid-template-rows: 64px 32px 32px 64px 46px 32px 0.9fr;
+            grid-template-areas: "col1-header"
+                "email"
+                "phone"
+                "col2-header"
+                "location1"
+                "location2"
+                "contacts-img";
+        }
+
+        h3 {
+            color: $color-light-xl;
+        }
+
+        .contacts-img {
+            grid-area: contacts-img;
+            margin-top: -20px;
+            margin-left: 23px;
+
+            @media screen and (max-width: 1230px) {
+                justify-self: center;
+            }
+
+            @media screen and (max-width: 900px) {
+                margin-left: 0;
+            }
+
+            @media screen and (max-width: 500px) {
+                max-width: 260px;
+                height: auto;
+            }
+
+        }
+
+        .col1-header {
+            grid-area: col1-header;
+        }
+
+        .col2-header {
+            grid-area: col2-header;
+        }
+
+        .email {
+            grid-area: email;
+        }
+
+        .phone {
+            grid-area: phone;
+        }
+
+        .location1 {
+            grid-area: location1;
+        }
+
+        .location2 {
+            grid-area: location2;
+        }
+
+        a {
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+
+            &.center {
+                @media screen and (max-width: 400px) {
+                    justify-content: center;
+                }
+            }
+
+            //vertical-align: middle;
+            @media screen and (max-width: 1230px) {
+                align-items: flex-end;
+            }
+
+            @media screen and (max-width: 400px) {
+                align-items: center;
+                justify-items: center;
+            }
+
+
+            img {
+                height: 32px;
+            }
+
+            h4 {
+                color: $color-primary;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                text-align: start;
+                margin-left: 20px;
+
+                &:hover {
+                    color: $color-primary-light;
+                }
+
+                @media screen and (max-width: 400px) {
+                    margin-left: 17px;
+                }
+            }
+        }
+    }
+
+    /*@include desktop;
+    display: flex;
+    flex-direction: row;
+    background: url(/assets/images/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+
+    .footer-content {
+        width: 1200px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 0 160px;
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+            width: 280px;
+            height: 234px;
+
+            h3 {
+                color: $color-light-xl;
+            }
+
+            ul {
+                margin-left: 0;
+                padding-left: 0;
+                margin-top: 0;
+
+                li {
+                    list-style: none;
+                    height: 32px;
+                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: row;
+
+                    a {
+                        display: flex;
+                        width: 260px;
+                        text-decoration: none;
+                        //vertical-align: middle;
+
+
+                        img {
+                            height: 32px;
+                        }
+
+                        h4 {
+                            color: $color-primary;
+                            margin-top: 3px;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-column-2 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+            width: 302px;
+            height: 234px;
+
+            h3 {
+                color: $color-light-xl;
+            }
+
+            div {
+                margin-left: 0;
+                padding-left: 0;
+                height: 46px;
+                margin-top: 32px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    //width: 260px;
+                    color: $color-primary;
+                    text-decoration: none;
+                    align-items: center;
+
+                    img {
+                        height: 32px;
+                    }
+
+                    h4 {
+                        color: $color-primary;
+                        margin-top: 1px;
+                        margin-bottom: 0;
+                        margin-left: 20px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-column-3 {
+        img {
+            display: block;
+        }
+    }*/
+}
