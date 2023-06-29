@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Our pets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-b7212f64162a42381fd7.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32-cbb24da9776b032e6440.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16-3b9af90c1180f09d2f36.png">
+    <link rel="manifest" href="efb980dee947069bbb14.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab-dbded787268f7ef09c3f.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+<script defer src="pets.js"></script></head>
+
+<body>
+    <div class="menu_overlay"></div>
+    <div class="modal hide">
+        <label class="modal-background"></label>
+        <div class="modal-content">
+            <button class="modal-close button-round-empty"><img src='images/cross-e7ec03580e1496053d1d.svg'
+                    alt="modal close image"></button>
+            <img class="pet-image" src='images/pets-jennifer-9b681b2b9a5c4ead263f.png' alt="animal image">
+            <div class="pet-content">
+                <h3 class="pet-name">Cat name</h3>
+                <h4 class="pet-breed">Breed</h4>
+                <h5 class="pet-description">Descr</h5>
+                <ul>
+                    <li><strong>Age:</strong> <span class="pet-age"></span></li>
+                    <li><strong>Inoculations:</strong> <span class="pet-inoculations"></span></li>
+                    <li><strong>Deseases:</strong> <span class="pet-deseases"></span></li>
+                    <li><strong>Parasites:</strong> <span class="pet-parasites"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pets-main-section">
+        <div class="pets-start-screen">
+            <header class="big">
+                <a class="logo-href" href="index.html">
+                    <div class="header-logo">
+                        <span class="logo-title logo-title-dark">Cozy House</span>
+                        <span class="logo-subtitle logo-subtitle-dark">Shelter for pets in Boston</span>
+                    </div>
+                </a>
+                <nav>
+                    <ul class="nav-links menu_box dark">
+                        <li class="nav-link dark"><a href="index.html">About the shelter</a></li>
+                        <li class="nav-link dark"><a class="active" href="pets.html">Our pets</a></li>
+                        <li class="nav-link dark"><a href="index.html#help">Help the shelter</a></li>
+                        <li class="nav-link dark"><a href="#contacts">Contacts</a></li>
+                    </ul>
+                    <div class="burger-menu dark">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div class="friends-section">
+        <div class="friends-content">
+            <h1 class="text-center title dark">Our friends who<br>are looking for a house</h1>
+            <div class="card-slider">
+                <div class="pet-card fade-out" data-id="0">
+                    <img src='images/pets-katrine-e335f0c8ca41ae153d1d.png' alt="animal image">
+                    <p class="card-title">Katrine</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+                <div class="pet-card fade-out">
+                    <img src='images/pets-jennifer-9b681b2b9a5c4ead263f.png' alt="animal image">
+                    <p class="card-title">Jennifer</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+                <div class="pet-card fade-out">
+                    <img src='images/pets-woody-c0e4bdcd7647ea797a7c.png' alt="animal image">
+                    <p class="card-title">Woody</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+                <div class="pet-card fade-out">
+                    <img src='images/pets-sophia-2344312ca42955d229ea.png' alt="animal image">
+                    <p class="card-title">Sophia</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+                <div class="pet-card fade-out">
+                    <img src='images/pets-timmy-8a519f0f9937f166710e.png' alt="animal image">
+                    <p class="card-title">Timmy</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+                <div class="pet-card fade-out">
+                    <img src='images/pets-charly-91488a52d5a6c98e48a3.png' alt="animal image">
+                    <p class="card-title">Charly</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+                <div class="pet-card fade-out">
+                    <img src='images/pets-scarlett-ad2b8d6672afb66d9bd4.png' alt="animal image">
+                    <p class="card-title">Scarlett</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+                <div class="pet-card fade-out">
+                    <img src='images/pets-freddie-9b78b4f16e336e93aa33.png' alt="animal image">
+                    <p class="card-title">Freddie</p>
+                    <button type="button" class="card-button-big-empty">Learn more</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button type="button" class="arrow-left fastforward-left button-round-disabled" disabled><svg width="25"
+                        height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.94687 10.7852L0.913671 6.08789V4.98438L9.94687 0.287109V1.625L2.43711 5.53125L9.94687 9.44727V10.7852ZM24.018 10.7852L14.9848 6.08789V4.98438L24.018 0.287109V1.625L16.5082 5.53125L24.018 9.44727V10.7852Z"
+                            fill="#292929" />
+                    </svg>
+                </button>
+                <button type="button" class="arrow-left button-round-disabled" disabled><svg width="10" height="11"
+                        viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.98242 10.7852L0.949219 6.08789V4.98438L9.98242 0.287109V1.625L2.47266 5.53125L9.98242 9.44727V10.7852Z"
+                            fill="#292929" />
+                    </svg>
+                </button>
+                <button type="button" class="slider-button button-round-fill active"><span
+                        class="current-page-indicator">1</span></button>
+                <button type="button" class="arrow-right button-round-empty"><svg width="10" height="11"
+                        viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z"
+                            fill="#292929" />
+                    </svg>
+                </button>
+                <button type="button" class="arrow-right fastforward-right button-round-empty"><svg width="25"
+                        height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.0055 6.08789L0.972265 10.7852V9.44727L8.48203 5.53125L0.972265 1.625V0.287109L10.0055 4.98438V6.08789ZM24.0766 6.08789L15.0434 10.7852V9.44727L22.5531 5.53125L15.0434 1.625V0.287109L24.0766 4.98438V6.08789Z"
+                            fill="#292929" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer id="contacts">
+        <div class="footer-content">
+
+            <h3 class="col1-header">For questions and suggestions</h3>
+
+            <a class="email center" href="mailto:email@shelter.com">
+                <img src="images/icon-email-3f2265dabc9181e28b99.svg" alt="email icon">
+                <h4>email@shelter.com</h4>
+            </a>
+
+            <a class="phone center" href="tel:+136745677554">
+                <img src='images/phone-0c400bf26dfd07f1fe95.png' alt="phone icon">
+                <h4>+13 674 567 75 54</h4>
+            </a>
+
+            <h3 class="col2-header">We are waiting for your visit</h3>
+            <a class="location1" href="https://maps.google.com/maps?q=238041" target="_blank">
+                <img src='images/icon-marker-95f41f2988d503e47492.png' alt="location icon">
+                <h4>1 Central Street, Boston<span><br>(entrance from the store)</span></h4>
+            </a>
+
+            <a class="location2" href="https://maps.google.com/maps?q=238000" target="_blank">
+                <img src='images/icon-marker-95f41f2988d503e47492.png' alt="location icon">
+                <h4>18 South Park, London</h4>
+            </a>
+            <img class="contacts-img" src="images/footer-puppy-ee72d148fede821a1c39.png" alt="dog in the footer">
+        </div>
+    </footer>
+</body>
+
+</html>
